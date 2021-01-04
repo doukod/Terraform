@@ -4,8 +4,8 @@ provider "aws" {
   secret_key = "YOUR-SECRET-KEY"
 }
 
-resource "aws_instance" "myec2" {
-  ami           = "ami-082b5a644766e0e6f"
+resource "aws_instance" "desired instance name" {
+  ami           = ""
   instance_type = "t2.micro"
 }
 
@@ -25,6 +25,7 @@ terraform {
 }
 
 #Commands used for State Management
+Example:
 terraform state list
 terraform state mv aws_instance.webapp aws_instance.myec2
 terraform state pull
