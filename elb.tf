@@ -1,5 +1,5 @@
 provider "aws" {
-  region     = "us-west-2"
+  region     = "us-east-1"
   access_key = "YOUR-ACCESS-KEY"
   secret_key = "YOUR-SECRET-KEY"
 }
@@ -29,7 +29,7 @@ resource "aws_elb" "bar" {
   connection_draining_timeout = var.timeout
 
   tags = {
-    Name = "foobar-terraform-elb"
+    Name = "desired tag"
   }
 }
 
@@ -49,7 +49,7 @@ variable "timeout" {
 }
 
 
-terraform.tfvars
+#terraform.tfvars
 elb_name="myelb"
 timeout="400"
-az=["us-west-1a","us-west-1b"]
+az=["us-east-1a","us-east-1b"]
