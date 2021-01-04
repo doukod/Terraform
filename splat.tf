@@ -1,11 +1,11 @@
 provider "aws" {
-  region     = "us-west-2"
+  region     = "us-east-1"
   access_key = "YOUR-ACCESS-KEY"
   secret_key = "YOUR-SECRET-KEY"
 }
 resource "aws_iam_user" "lb" {
   name = "iamuser.${count.index}"
-  count = 3
+  count = 2
   path = "/system/"
 }
 
