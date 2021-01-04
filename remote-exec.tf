@@ -1,7 +1,7 @@
 resource "aws_instance" "myec2" {
    ami = "ami-082b5a644766e0e6f"
    instance_type = "t2.micro"
-   key_name = "kplabs-terraform"
+   key_name = "keypair name"
 
    provisioner "remote-exec" {
      inline = [
@@ -12,9 +12,9 @@ resource "aws_instance" "myec2" {
    connection {
      type = "ssh"
      user = "ec2-user"
-     private_key = file("./kplabs-terraform.pem")
+     private_key = file("./keypair name")
      host = self.public_ip
    }
    }
 }
-© 2020 GitHub, Inc.
+
