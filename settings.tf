@@ -7,11 +7,11 @@ terraform {
 
 provider "aws" {
   region     = "us-east-1"
-  access_key = "YOUR-KEY"
-  secret_key = "YOUR-KEY"
+  access_key = "YOUR ACCESS-KEY"
+  secret_key = "YOUR SECRET-KEY"
 }
 
-resource "aws_instance" "myec2" {
-   ami = "ami-0b1e534a4ff9019e0"
+resource "aws_instance" "desired instance name" {
+   ami = ""
    instance_type = "t2.micro"
 }
