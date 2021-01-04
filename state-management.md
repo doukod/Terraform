@@ -16,14 +16,15 @@ resource "aws_iam_user" "lb" {
 
 terraform {
   backend "s3" {
-    bucket = "kplabs-remote-backends"
-    key    = "demo.tfstate"
+    bucket = "bucket name"
+    key    = "keypair name"
     region = "us-east-1"
     access_key = "YOUR-ACCESS-KEY"
     secret_key = "YOUR-SECRET-KEY"
   }
 }
-State Management Commands:
+
+#State Management Commands:
 List the Resource with State File:
 terraform state list
 Rename Resource within Terraform State
