@@ -1,5 +1,5 @@
 provider "aws" {
-  region     = "us-west-2"
+  region     = "us-east-1"
   access_key = "PUT-YOUR-ACCESS-KEY-HERE"
   secret_key = "PUT-YOUR-SECRET-KEY-HERE"
 }
@@ -22,7 +22,7 @@ resource "aws_eip_association" "eip_assoc" {
 
 
 resource "aws_security_group" "allow_tls" {
-  name        = "kplabs-security-group"
+  name        = "name SG"
 
   ingress {
     from_port   = 443
@@ -33,4 +33,4 @@ resource "aws_security_group" "allow_tls" {
 #    cidr_blocks = [aws_eip.lb.public_ip/32]
   }
 }
-© 2020 GitHub, Inc.
+
