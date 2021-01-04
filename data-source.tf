@@ -15,7 +15,7 @@ data "aws_ami" "app_ami" {
   }
 }
 
-resource "aws_instance" "instance-1" {
+resource "aws_instance" "instance name" {
     ami = data.aws_ami.app_ami.id
    instance_type = "t2.micro"
 }
