@@ -1,4 +1,4 @@
-eip.tf
+#eip.tf
 resource "aws_eip" "myeip" {
   vpc = "true"
 }
@@ -9,7 +9,8 @@ resource "aws_eip" "myeip01" {
 }
 1st EIP -- one region
 2nd EIP -- second region
-providers.tf
+
+#providers.tf
 provider "aws" {
   region     =  "us-west-1"
 }
