@@ -6,25 +6,26 @@ terraform workspace new prd
 terraform workspace list
 terraform workspace select dev
 Terraform Based Configuration File
+
 provider "aws" {
-  region     = "ap-south-1"
+  region     = "us-east-1"
   access_key = "YOUR-ACCESS-KEY"
   secret_key = "YOUR-SECRET-KEY"
 }
 
 resource "aws_instance" "myec2" {
-   ami = "ami-082b5a644766e0e6f"
+   ami = ""
    instance_type = "t2.micro"
 }
 Terraform Final Modified Configuration File
 provider "aws" {
-  region     = "us-west-2"
+  region     = "us-east-1"
   access_key = "YOUR-ACCESS-KEY"
   secret_key = "YOUR-SECRET-KEY"
 }
 
 resource "aws_instance" "myec2" {
-   ami = "ami-082b5a644766e0e6f"
+   ami = ""
    instance_type = lookup(var.instance_type,terraform.workspace)
 }
 
@@ -37,6 +38,7 @@ variable "instance_type" {
     prd     = "t2.large"
   }
 }
-Documentation Referred:
+
+#Documentation Referred:
 Terraform Function - Lookup
 https://www.terraform.io/docs/configuration/functions/lookup.html
