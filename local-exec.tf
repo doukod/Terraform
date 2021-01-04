@@ -1,8 +1,8 @@
-resource "aws_instance" "myec2" {
-   ami = "ami-082b5a644766e0e6f"
+resource "aws_instance" "desired instance name" {
+   ami = ""
    instance_type = "t2.micro"
 
    provisioner "local-exec" {
-    command = "echo ${aws_instance.myec2.private_ip} >> private_ips.txt"
+    command = "echo ${aws_instance.instance name.private_ip} >> private_ips.txt"
   }
 }
