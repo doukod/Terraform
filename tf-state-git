@@ -1,8 +1,8 @@
 RDS Configuration File
 provider "aws" {
   region  = "us-east-1"
-  access_key = "YOUR-KEY"
-  secret_key = "YOUR-KEY"
+  access_key = "YOUR ACCESS-KEY"
+  secret_key = "YOUR SECRET-KEY"
 
 
 resource "aws_db_instance" "default" {
