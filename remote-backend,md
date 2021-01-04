@@ -11,7 +11,7 @@ resource "aws_iam_user" "lb" {
 }
 
 #backend.hcl
-workspaces { name = "kplabs-remote-backend" }
+workspaces { name = "workspace name" }
 hostname     = "app.terraform.io"
 organization = "demo-kplabs-org"
 
