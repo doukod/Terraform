@@ -1,6 +1,6 @@
-varsdemo.tf
+#varsdemo.tf
 resource "aws_security_group" "var_demo" {
-  name        = "kplabs-variables"
+  name        = "name SG"
 
   ingress {
     from_port   = 443
@@ -25,7 +25,7 @@ resource "aws_security_group" "var_demo" {
 }
 
 
-variables.tf
+#variables.tf
 variable "vpn_ip" {
   default = "116.50.30.50/32"
 }
