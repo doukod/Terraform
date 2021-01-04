@@ -5,8 +5,8 @@ provider "aws" {
   version = ">=2.10,<=2.30"
 }
 
-resource "aws_instance" "myec2" {
-  ami           = "ami-082b5a644766e0e6f"
+resource "aws_instance" "instance name" {
+  ami           = ""
   instance_type = "t2.micro"
 }
 
