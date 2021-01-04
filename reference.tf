@@ -6,8 +6,8 @@ provider "aws" {
 
 
 
-resource "aws_instance" "myec2" {
-   ami = "ami-082b5a644766e0e6f"
+resource "aws_instance" "desired instance name" {
+   ami = ""
    instance_type = "t2.micro"
 }
 
@@ -15,8 +15,8 @@ resource "aws_eip" "lb" {
   vpc      = true
 }
 
-resource "aws_eip_association" "eip_assoc" {
-  instance_id   = aws_instance.myec2.id
+resource "aws_eip_association" "desired name eip" {
+  instance_id   = aws_instance.instance name.id
   allocation_id = aws_eip.lb.id
 }
 
