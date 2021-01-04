@@ -1,12 +1,12 @@
 provider "aws" {
-  region     = "us-west-2"
+  region     = "us-east-1"
   access_key = "YOUR-ACCESS-KEY"
   secret_key = "YOUR-SECRET-KEY"
 }
 
 
-resource "aws_instance" "instance-1" {
-   ami = "ami-082b5a644766e0e6f"
+resource "aws_instance" "instance name" {
+   ami = ""
    instance_type = "t2.micro"
    count = 3
 }
