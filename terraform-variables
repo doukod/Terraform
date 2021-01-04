@@ -1,4 +1,4 @@
-varsdemo.tf
+#varsdemo.tf
 
 resource "aws_security_group" "var_demo" {
   name        = "kplabs-variables"
@@ -26,7 +26,7 @@ resource "aws_security_group" "var_demo" {
 }
 
 
-variables.tf
+#variables.tf
 variable "vpn_ip" {
-  default = "116.50.30.50/32"
+  default = "112.20.30.60/32"
 }
