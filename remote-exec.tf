@@ -1,12 +1,12 @@
-resource "aws_instance" "myec2" {
-   ami = "ami-082b5a644766e0e6f"
+resource "aws_instance" "desired instance name" {
+   ami = ""
    instance_type = "t2.micro"
    key_name = "keypair name"
 
    provisioner "remote-exec" {
      inline = [
-       "sudo amazon-linux-extras install -y nginx1.12",
-       "sudo systemctl start nginx"
+       "sudo yum install httpd -y",
+       "sudo systemctl start httpd"
      ]
 
    connection {
