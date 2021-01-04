@@ -1,5 +1,5 @@
 provider "aws" {
-  region     = "us-west-2"
+  region     = "us-east-1"
   access_key = "YOUR-ACCESS-KEY"
   secret_key = "YOUR-SECRET-KEY"
 }
@@ -16,15 +16,15 @@ resource "aws_iam_user" "lb" {
 
 terraform {
   backend "s3" {
-    bucket = "kplabs-remote-backends"
-    key    = "demo.tfstate"
+    bucket = "bucket name"
+    key    = "keypair name"
     region = "us-east-1"
     access_key = "YOUR-ACCESS-KEY"
     secret_key = "YOUR-SECRET-KEY"
   }
 }
 
-Commands used for State Management
+#Commands used for State Management
 terraform state list
 terraform state mv aws_instance.webapp aws_instance.myec2
 terraform state pull
