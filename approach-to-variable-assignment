@@ -20,11 +20,14 @@ resource "aws_instance" "myec2" {
    ami = "ami-082b5a644766e0e6f"
    instance_type = var.instancetype
 }
-variables.tf
+
+#variables.tf
 variable "instancetype" {
   default = "t2.micro"
 }
-terraform.tfvars
+
+
+#terraform.tfvars
 instancetype="t2.large"
 Loading Variable Values from CLI
 terraform plan -var="instancetype=t2.small"
