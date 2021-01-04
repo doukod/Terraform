@@ -13,7 +13,7 @@ output "eip" {
 }
 
 resource "aws_s3_bucket" "mys3" {
-  bucket = "kplabs-attribute-demo-001"
+  bucket = "bucket name"
 }
 
 output "mys3bucket" {
