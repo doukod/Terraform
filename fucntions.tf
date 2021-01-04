@@ -20,21 +20,21 @@ variable "tags" {
 variable "ami" {
   type = map
   default = {
-    "us-east-1" = "ami-0323c3dd2da7fb37d"
-    "us-west-2" = "ami-0d6621c01e8c2de2c"
-    "ap-south-1" = "ami-0470e33cd681b2476"
+    "us-east-1" = ""
+    "us-west-2" = ""
+    "ap-south-1" = ""
   }
 }
 
-resource "aws_key_pair" "loginkey" {
-  key_name   = "login-key"
+resource "aws_key_pair" "desired name keypair" {
+  key_name   = "keypair name"
   public_key = file("${path.module}/id_rsa.pub")
 }
 
 resource "aws_instance" "app-dev" {
    ami = lookup(var.ami,var.region)
    instance_type = "t2.micro"
-   key_name = aws_key_pair.loginkey.key_name
+   key_name = aws_key_pair.keypair name.key_name
    count = 2
 
    tags = {
