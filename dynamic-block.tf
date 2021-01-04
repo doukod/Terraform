@@ -4,8 +4,8 @@ variable "sg_ports" {
   default     = [8200, 8201,8300, 9200, 9500]
 }
 
-resource "aws_security_group" "dynamicsg" {
-  name        = "dynamic-sg"
+resource "aws_security_group" "SG desired name" {
+  name        = "name SG"
   description = "Ingress for Vault"
 
   dynamic "ingress" {
